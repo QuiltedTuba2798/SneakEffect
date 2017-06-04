@@ -23,6 +23,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerToggleSneakEvent;
 use pocketmine\entity\Effect;
+use pocketmine\permission\ServerOperator;
 
 class Main extends PluginBase implements Listener {
     
@@ -30,11 +31,11 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->saveDefaultConfig();
 	$this->reloadConfig();
-        $this->getLogger()->info("§eSneakEffect aEnabled !");
+        $this->getLogger()->info(TextFormat::YELLOW . "SneakEffect " . TextFormat::GREEN . "Enabled !");
         }
         
     public function onDisable() {
-        $this->getLogger()->info("§eSneakEffect aDisable !");   
+        $this->getLogger()->info(TextFormat::YELLOW . "SneakEffect " . TextFormat::GREEN "Disabled !");   
     }
     
     public function onPlayerSneakEvent(PlayerToggleSneakEvent $e) {
@@ -50,5 +51,5 @@ class Main extends PluginBase implements Listener {
             $effect->setAmplifier($amplifier);
             $effect->setDuration($duration);
             $p->addEffect($effect);
-      }
     }
+}
