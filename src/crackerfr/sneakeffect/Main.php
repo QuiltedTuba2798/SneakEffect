@@ -24,6 +24,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerToggleSneakEvent;
 use pocketmine\entity\Effect;
 use pocketmine\permission\ServerOperator;
+use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener {
     
@@ -35,7 +36,7 @@ class Main extends PluginBase implements Listener {
         }
         
     public function onDisable() {
-        $this->getLogger()->info(TextFormat::YELLOW . "SneakEffect " . TextFormat::GREEN "Disabled !");   
+        $this->getLogger()->info(TextFormat::YELLOW . "SneakEffect " . TextFormat::GREEN . "Disabled !");   
     }
     
     public function onPlayerSneakEvent(PlayerToggleSneakEvent $e) {
