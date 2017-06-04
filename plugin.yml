@@ -1,5 +1,8 @@
-name: JumpSneak
+name: SneakEffect
 author: CrackerFR
 version: "1.0"
 api: 2.0.0
 main: crackerfr\sneakeffect\Main
+permission:
+ sneak.effect:
+  default: op
