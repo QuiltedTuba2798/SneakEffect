@@ -1,7 +1,7 @@
-name: SneakEffect
+name: SNEAKEFFECT
 author: CrackerFR
 version: "1.0"
-api: 3.0.0-ALPHA9
+api: [3.0.0, 3.0.0-ALPHA12, 4.0.0]
 main: crackerfr\sneakeffect\Main
 permission:
  sneak.effect:
